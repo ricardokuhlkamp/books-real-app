@@ -47,9 +47,9 @@ const loginUser = async (email, password) => {
 const getUserProfile = async (username) => {
   try {
     const user = await User.find({username: { $regex: username}}, {username: true, _id: false});
-  if (!user) {
-    return { status: 'NOTFOUND', data: 'user not found' };
-  };  
+    if (!user || user.length === 0) {
+      return { status: 'NOTFOUND', data: 'user not found' };
+    }
     return { status: 'SUCCESSFUL', data: user };
   } catch (error) {
     return { status: 'ERROR', data: `Error: ${error}` };
