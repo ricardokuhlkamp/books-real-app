@@ -9,7 +9,15 @@ const app = express();
 const PORT = process.env.PORT | 5000;
 
 app.use(express.json());
-app.use(cors());
+
+// Defina a origem permitida no corsOptions
+const corsOptions = {
+  origin: process.env.REACT_FRONTEND, // Substitua com o domínio do seu frontend
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+// app.use(cors());
 
 // app.get("/", (req, res) => {
 //   res.send("ok...");
