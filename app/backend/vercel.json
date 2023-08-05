@@ -5,7 +5,7 @@
   ],
   "routes": [
     {
-      "srcroutes": "/book/(.*)",
+      "src/routes": "/book/(.*)",
       "dest": "/book/$1"
     },
     {
