@@ -5,6 +5,14 @@
   ],
   "routes": [
     {
+      "src": "/book/(.*)",
+      "dest": "/book/$1"
+    },
+    {
+      "src": "/user/(.*)",
+      "dest": "/user/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/"
     }
