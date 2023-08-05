@@ -12,7 +12,7 @@ Bem-vindo ao LivroRealm, uma aplicação de CRUD (Create, Read, Update, Delete) 
 </div>
 </center>
 
-- [___Veja o projeto em ação!___]() 🎬
+- [___Veja o projeto em ação!___](https://books-realm-frontend.onrender.com) 🎬
 
 > Para o deploy do backend e frontend fora utilizado o [Render](https://render.com/)
 
