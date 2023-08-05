@@ -21,7 +21,7 @@ module.exports.getBookByTitle = async (req, res) => {
 
 module.exports.getBookByAuthor = async (req, res) => {  
   const { author } = req.query;
-  const { status, data } = await BookService.getBookByAuthor(author);
+  const { status, data } = await BookService.getBookByAuthor(String(author));
   res.status(mapStatusHTTP(status)).send(data);
 };
 
