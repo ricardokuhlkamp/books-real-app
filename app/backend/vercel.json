@@ -4,8 +4,8 @@
     { "src": "backend/src/server.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/book/.*", "dest": "backend/src/server.js" },
-    { "src": "/api/user/.*", "dest": "backend/src/server.js" }
+    { "src": "/book/.*", "dest": "backend/src/server.js" },
+    { "src": "/user/.*", "dest": "backend/src/server.js" }
   ],
   "env": {
     "MONGO_URI": "mongodb+srv://ricardokds:kgdFdbzgXJS1WnlF@cluster0.7pfuoq1.mongodb.net/BOOKS_DB?retryWrites=true&w=majority",
