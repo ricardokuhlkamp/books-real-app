@@ -1,6 +1,6 @@
 const BookModel = require("../models/BookModel");
 const BookService = require("../services/BookService");
-const mapStatusHTTP = require("../../utils/mapStatusHTTP");
+const mapStatusHTTP = require("../utils/mapStatusHTTP");
 
 module.exports.getBooks = async (req, res) => {
   const { status, data } = await BookService.getBooks();

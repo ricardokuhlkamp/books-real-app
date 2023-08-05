@@ -2,8 +2,8 @@ const User = require("../models/UserModel");
 const UserService = require("../services/UserService");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
-const { generateJWTToken } = require("../../utils/auth");
-const mapStatusHTTP = require("../../utils/mapStatusHTTP");
+const { generateJWTToken } = require("../utils/auth");
+const mapStatusHTTP = require("../utils/mapStatusHTTP");
 
 module.exports.registerUser = async (req, res) => {  
   const { username, email, password } = req.body;
