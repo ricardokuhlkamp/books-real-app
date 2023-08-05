@@ -1,0 +1,22 @@
+.container-modal {
+  position: absolute;
+}
+
+.overlay-react-modal {
+  background-color: #ececec;
+}
+
+.react-modal {
+  max-width: 500px;
+  width: 300px;
+  max-height: 560px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include elevation(0.3);
+}
