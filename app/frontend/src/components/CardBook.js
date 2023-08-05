@@ -6,8 +6,10 @@ import FormUpdateBook from './FormUpdateBook';
 import { axiosDeleteBook } from '../services/fetchs';
 import HeaderContext from '../context/HeaderContext';
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate} from 'react-router-dom';
 
 export default function CardBook(props) {
+  const navigate = useNavigate();
   const { setRenderBooks } = useContext(HeaderContext);
   const { _id, title, author, genre, image, pages, year, edition, price } = props;
   const formattedPrice = price.toLocaleString('pt-BR', {
