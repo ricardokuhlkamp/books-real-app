@@ -1,15 +1,15 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.js", "use": "@vercel/node" }
+    { "backend": "*.js", "use": "@vercel/node" }
   ],
   "routes": [
     {
-      "src": "/book/(.*)",
+      "backend/routes": "/book/(.*)",
       "dest": "/book/$1"
     },
     {
-      "src": "/user/(.*)",
+      "backend/routes": "/user/(.*)",
       "dest": "/user/$1"
     }
   ]
