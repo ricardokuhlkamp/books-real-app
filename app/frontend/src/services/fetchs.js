@@ -14,7 +14,6 @@ export const axiosLoginWithAuthorization = async (email, password) => {
     //   throw new Error('Erro na requisição');
     // }
     localStorage.setItem('user',JSON.stringify(token.data))
-    console.log("token: ", token)
     return token.status;
   } catch (error) {
     console.error('Erro na requisição:', error);
@@ -34,8 +33,7 @@ export const axiosCreateUser = async (username, email, password) => {
     // if (!response.ok) {
     //   throw new Error('Erro na requisição');
     // }    
-    localStorage.setItem('user',JSON.stringify(token.data))
-    console.log("token: ", token)
+    localStorage.setItem('user',JSON.stringify(token.data));
     return token.status;
   } catch (error) {
     console.error('Erro na requisição:', error);
@@ -44,23 +42,19 @@ export const axiosCreateUser = async (username, email, password) => {
 
 export const axiosGetAllBooks = async () => {  
   const token =JSON.parse(localStorage.getItem('user'));
-  console.log("token local: ", token)
   const headers = {
     Authorization: token,
   };
   const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/book/books`, { headers });
-  console.log(' axiosGetAllBooks Response: ', response);
   return response;  
 };
 
 export const axiosCreateBook = async (bodyData) => {  
   const token =JSON.parse(localStorage.getItem('user'));
-  console.log("token axiosCreateBook: ", token)
   const headers = {
     Authorization: token,
   };
   const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/book/savebook`, bodyData, { headers });
-  console.log(' axiosCreateBook Response: ', response);
   return response;
 };
 
