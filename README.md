@@ -118,7 +118,14 @@ cd app/backend
 ```
 npm install
 ```
-- Crie um arquivo .env na pasta backend e configure as variáveis de ambiente necessárias, como as configurações do banco de dados MongoDB e a chave secreta do JWT.
+
+- Crie um arquivo .env na pasta backend e configure as variáveis de ambiente necessárias, como as configurações do banco de dados MongoDB, as chaves secretas do JWT, a chave secreta do bcrypt, e a porta (PORT=5000).
+
+    - MONGO_URI;
+    - JWT_SECRET_KEY;
+    - JWT_EXPIRES_IN_KEY;
+    - BCRYPT_SECRET_KEY;
+    - PORT;
 
 3.  Iniciar o Backend:
 - Execute o seguinte comando para iniciar o servidor backend em modo de desenvolvimento:
@@ -142,6 +149,8 @@ npm start
 ```
 6.  Acessar a Aplicação:
 - Abra seu navegador e acesse a aplicação em: http://localhost:3000.
+
+Não esqueça de criar um arquivo .env na raiz do frontend com o nome REACT_APP_API_URL. Localmente utilizara como valor http://localhost:5000.
 
 ---
 
