@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 const generateJWTToken = (userId) => {
   const secretKey = process.env.JWT_SECRET_KEY;
-  const expiresIn = '20h'; // Tempo de expiração do token (1 hora)
+  const expiresIn = String(process.env.JWT_EXPIRES_IN_KEY); // Tempo de expiração do token (1 hora)
 
   // Cria o token JWT com base no ID do usuário
   const token = jwt.sign({ userId }, secretKey, { expiresIn });
