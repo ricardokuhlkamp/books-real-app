@@ -1,4 +1,4 @@
-# LivroRealm - Aplicação CRUD de Livros
+# BookRealm - Aplicação CRUD de Livros
 ___Projeto Full Stack___ / ___MERN___
 
 Bem-vindo ao LivroRealm, uma aplicação de CRUD (Create, Read, Update, Delete) que permite aos usuários gerenciar livros que eles gostam. Nesta aplicação, os usuários podem adicionar informações sobre livros, incluindo título, autor, descrição, imagem da capa e outras informações relevantes. Eles também podem visualizar, atualizar e excluir os livros que foram adicionados anteriormente.
