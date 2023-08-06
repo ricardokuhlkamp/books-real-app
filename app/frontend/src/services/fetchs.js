@@ -8,7 +8,7 @@ export const axiosLoginWithAuthorization = async (email, password) => {
       password,
     };
 
-    const token = await axios.post(`${process.env.REACT_APP_API_URL}/user/login`, bodyData);
+    const token = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/login`, bodyData);
     // console.log('Response: ', response)
     // if (!response.ok) {
     //   throw new Error('Erro na requisição');
@@ -29,7 +29,7 @@ export const axiosCreateUser = async (username, email, password) => {
       password,
     };
 
-    const token = await axios.post(`${process.env.REACT_APP_API_URL}/user/signin`, bodyData);
+    const token = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/signin`, bodyData);
     // console.log('Response: ', response)
     // if (!response.ok) {
     //   throw new Error('Erro na requisição');
@@ -48,7 +48,7 @@ export const axiosGetAllBooks = async () => {
   const headers = {
     Authorization: token,
   };
-  const response = await axios.get(`${process.env.REACT_APP_API_URL}/book/books`, { headers });
+  const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/book/books`, { headers });
   console.log(' axiosGetAllBooks Response: ', response);
   return response;  
 };
@@ -59,7 +59,7 @@ export const axiosCreateBook = async (bodyData) => {
   const headers = {
     Authorization: token,
   };
-  const response = await axios.post(`${process.env.REACT_APP_API_URL}/book/savebook`, bodyData, { headers });
+  const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/book/savebook`, bodyData, { headers });
   console.log(' axiosCreateBook Response: ', response);
   return response;
 };
@@ -69,7 +69,7 @@ export const axiosGetBookById = async (id) => {
   const headers = {
     Authorization: token,
   };
-  const response = await axios.get(`${process.env.REACT_APP_API_URL}/book/book/${id}`, { headers });
+  const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/book/book/${id}`, { headers });
   return response;
 };
 
@@ -78,7 +78,7 @@ export const axiosUpdateBook = async (bodyData, id) => {
   const headers = {
     Authorization: token,
   };
-  const response = await axios.put(`${process.env.REACT_APP_API_URL}/book/updatebook/${id}`, bodyData, { headers });
+  const response = await axios.put(`${process.env.REACT_APP_API_URL}/api/book/updatebook/${id}`, bodyData, { headers });
   return response;
 };
 
@@ -87,7 +87,7 @@ export const axiosDeleteBook = async (id) => {
   const headers = {
     Authorization: token,
   };
-  const response = await axios.delete(`${process.env.REACT_APP_API_URL}/book/deletebook/${id}`, { headers });
+  const response = await axios.delete(`${process.env.REACT_APP_API_URL}/api/book/deletebook/${id}`, { headers });
   return response;
 };
 
@@ -97,7 +97,7 @@ export const axiosGetBookByTitle = async (title) => {
     Authorization: token,
   };
   try {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/book/title?title=${title}`, { headers });
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/book/title?title=${title}`, { headers });
     return response;
   } catch (error) {
     console.error('Erro na requisição:', error);
@@ -111,7 +111,7 @@ export const axiosGetBooksByAuthor = async (author) => {
     Authorization: token,
   };
   try {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/book/author?author=${author}`, { headers });
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/book/author?author=${author}`, { headers });
     return response;
   } catch (error) {
     console.error('Erro na requisição:', error);
@@ -125,7 +125,7 @@ export const axiosGetBooksByGenre = async (genre) => {
     Authorization: token,
   };
   try {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/book/genre?genre=${genre}`, { headers });
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/book/genre?genre=${genre}`, { headers });
     return response;
   } catch (error) {
     console.error('Erro na requisição:', error);
