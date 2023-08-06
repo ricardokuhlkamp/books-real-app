@@ -65,7 +65,6 @@ function NavBar() {
     genre: getBookByGenre,
   };
   const handleFilter = () => {
-    // console.log("selected.searchInput.length: ", selected.searchInput)
     if (selected.searchInput.length < 1) {      
       return toast.info("Para efetuar a busca é necessário digitar a requisição desejada!");
     }

@@ -20,8 +20,6 @@ export default function CardBook(props) {
   });
   const [showUpdateFormForThisBook, setShowUpdateFormForThisBook] = useState(false);
   const updateBook = () => {
-    console.log("Update book clicked");
-    console.log("showUpdateFormForThisBook: ", showUpdateFormForThisBook);
     setShowUpdateFormForThisBook(true);  
   }
 
