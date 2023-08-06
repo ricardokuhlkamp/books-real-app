@@ -36,7 +36,7 @@ export const axiosCreateUser = async (username, email, password) => {
     // }    
     localStorage.setItem('user',JSON.stringify(token.data))
     console.log("token: ", token)
-    return token.statusText;
+    return token.status;
   } catch (error) {
     console.error('Erro na requisição:', error);
   }

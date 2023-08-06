@@ -30,7 +30,7 @@ function SignIn() {
   const handleLogin = async () => {
     try {
       const response = await axiosCreateUser(username, email, password);
-      if (String(response) === "OK") {
+      if (Number(response) === 200) {
         // Autenticação bem-sucedida, redirecionar para /home
         toast.success('Usuário criado!');
         navigate('/home');
