@@ -7,9 +7,7 @@ export const axiosLoginWithAuthorization = async (email, password) => {
       email,
       password,
     };
-
     const token = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/login`, bodyData);
-    // console.log('Response: ', response)
     // if (!response.ok) {
     //   throw new Error('Erro na requisição');
     // }

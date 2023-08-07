@@ -28,7 +28,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await axiosLoginWithAuthorization(email, password);    
+      const response = await axiosLoginWithAuthorization(email, password); 
       if (Number(response) === 200) {
         toast.success('Credenciais corretas!');
         navigate('/home');

@@ -26,6 +26,7 @@ function NewBook() {
         edition,
         price,
       };
+      console.log(bodyData)
       const response = await axiosCreateBook(bodyData);
       if (String(response.statusText) === "Created") {
         toast.success('Livro criado!');
@@ -141,8 +142,8 @@ function NewBook() {
         </fieldset>
         <button
           className='btn'
-          type="button"
-          onClick={handleCreate}
+          type="submit"
+          onClick={() => handleCreate()}
         >
           Create
         </button>

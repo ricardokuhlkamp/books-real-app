@@ -33,9 +33,7 @@ module.exports.getBookByGenre = async (req, res) => {
 
 module.exports.saveBook = async (req, res) => {
   const { title, author, genre, pages, year, edition, price, image } = req.body;
-
-  price = (Number(price)).toFixed(2);
-  
+   
   const { status, data } = await BookService.saveBook(
     title, author, genre, pages, year, edition, price, image,
   );
