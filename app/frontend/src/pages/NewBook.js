@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
 function NewBook() {
+  const [isDisabled, setIsDisabled] = useState(true);
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -45,6 +46,12 @@ function NewBook() {
       }
     }    
   }
+
+  useEffect(() => {
+    if (localStorage.getItem('adminBooks') === process.env.ADMIN) {
+      setIsDisabled(false)
+    };
+  }, [localStorage.getItem('adminBooks'), process.env.ADMIN]);
 
   return (
     <main>
@@ -143,7 +150,7 @@ function NewBook() {
         <button
           className='btn'
           type="submit"
-          disabled={localStorage.getItem('adminBooks') === process.env.ADMIN ? true : false}
+          disabled={ isDisabled }
           onClick={() => handleCreate()}
         >
           Create

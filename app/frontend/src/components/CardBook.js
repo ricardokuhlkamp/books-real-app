@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate} from 'react-router-dom';
 
 export default function CardBook(props) {
+  const [isDisabled, setIsDisabled] = useState(true);
   const navigate = useNavigate();
   const { setRenderBooks } = useContext(HeaderContext);
   const { _id, title, author, genre, image, pages, year, edition, price } = props;
@@ -38,6 +39,13 @@ export default function CardBook(props) {
       }
     }
   }
+
+  useEffect(() => {
+    if (localStorage.getItem('adminBooks') === process.env.ADMIN) {
+      setIsDisabled(false)
+    };
+  }, [localStorage.getItem('adminBooks'), process.env.ADMIN]);
+  
   
   return (
     <div className="box-cards">
@@ -57,11 +65,11 @@ export default function CardBook(props) {
         <div className="icon_holder">
           <BiEditAlt
             className="icon"
-            disabled={localStorage.getItem('adminBooks') === process.env.ADMIN ? true : false}
+            disabled={ isDisabled }
             onClick={() => updateBook()} />
           <BsTrash
             className="icon"
-            disabled={localStorage.getItem('adminBooks') === process.env.ADMIN ? true : false}
+            disabled={ isDisabled }
             onClick={() => removeBook(_id)} />
         </div>
       </div>      
