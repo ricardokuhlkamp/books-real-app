@@ -9,7 +9,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate} from 'react-router-dom';
 
 export default function CardBook(props) {
-  const [isDisabled, setIsDisabled] = useState(true);
   const navigate = useNavigate();
   const { setRenderBooks } = useContext(HeaderContext);
   const { _id, title, author, genre, image, pages, year, edition, price } = props;
@@ -38,16 +37,7 @@ export default function CardBook(props) {
         console.error('Erro na requisição:', error.message);
       }
     }
-  }
-
-  useEffect(() => {
-    console.log("localStorage.getItem('adminBooks'): ", localStorage.getItem('adminBooks'))
-    console.log("process.env.ADMIN: ", process.env.ADMIN)
-    if (localStorage.getItem('adminBooks') === process.env.ADMIN) {
-      setIsDisabled(false)
-    };
-  }, [localStorage.getItem('adminBooks'), process.env.ADMIN]);
-  
+  }  
   
   return (
     <div className="box-cards">
@@ -67,11 +57,9 @@ export default function CardBook(props) {
         <div className="icon_holder">
           <BiEditAlt
             className="icon"
-            disabled={ isDisabled }
             onClick={() => updateBook()} />
           <BsTrash
             className="icon"
-            disabled={ isDisabled }
             onClick={() => removeBook(_id)} />
         </div>
       </div>      
