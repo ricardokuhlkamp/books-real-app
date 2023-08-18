@@ -30,7 +30,6 @@ function Login() {
     try {
       const response = await axiosLoginWithAuthorization(email, password); 
       if (Number(response) === 200) {
-        toast.success('Credenciais corretas!');
         navigate('/home');
       } else {
         toast.error('Credenciais inválidas');
