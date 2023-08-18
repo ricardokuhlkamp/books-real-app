@@ -41,6 +41,8 @@ export default function CardBook(props) {
   }
 
   useEffect(() => {
+    console.log("localStorage.getItem('adminBooks'): ", localStorage.getItem('adminBooks'))
+    console.log("process.env.ADMIN: ", process.env.ADMIN)
     if (localStorage.getItem('adminBooks') === process.env.ADMIN) {
       setIsDisabled(false)
     };
