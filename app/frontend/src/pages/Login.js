@@ -30,6 +30,7 @@ function Login() {
     try {
       const response = await axiosLoginWithAuthorization(email, password); 
       if (Number(response) === 200) {
+        localStorage.setItem('adminBooks', JSON.stringify(`${email}${password}`))
         navigate('/home');
       } else {
         toast.error('Credenciais inválidas');

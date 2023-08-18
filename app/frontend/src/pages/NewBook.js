@@ -143,6 +143,7 @@ function NewBook() {
         <button
           className='btn'
           type="submit"
+          disabled={localStorage.getItem('adminBooks') === process.env.ADMIN ? true : false}
           onClick={() => handleCreate()}
         >
           Create

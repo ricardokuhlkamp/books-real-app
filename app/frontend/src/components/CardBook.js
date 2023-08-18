@@ -55,8 +55,14 @@ export default function CardBook(props) {
           <h4>Preço: { formattedPrice }</h4>
         </div>
         <div className="icon_holder">
-          <BiEditAlt className="icon" onClick={() => updateBook()} />
-          <BsTrash className="icon" onClick={() => removeBook(_id)} />
+          <BiEditAlt
+            className="icon"
+            disabled={localStorage.getItem('adminBooks') === process.env.ADMIN ? true : false}
+            onClick={() => updateBook()} />
+          <BsTrash
+            className="icon"
+            disabled={localStorage.getItem('adminBooks') === process.env.ADMIN ? true : false}
+            onClick={() => removeBook(_id)} />
         </div>
       </div>      
     </div>
