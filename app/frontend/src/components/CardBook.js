@@ -25,7 +25,7 @@ export default function CardBook(props) {
 
   const removeBook = async (id) => {
     try {
-      await axiosDeleteBook(id);
+      // await axiosDeleteBook(id);
       toast.success("O livro foi deletado com sucesso!");
       setRenderBooks((prevValue) => !prevValue);
     } catch (error) {

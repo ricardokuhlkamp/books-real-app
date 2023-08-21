@@ -143,6 +143,7 @@ function NewBook() {
         <button
           className='btn'
           type="submit"
+          disabled={true}
           onClick={() => handleCreate()}
         >
           Create
