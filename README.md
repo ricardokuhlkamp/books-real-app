@@ -61,7 +61,7 @@ Em resumo, uma aplicação MERN é uma aplicação web completa que aproveita o 
 </center>
 
 - [___Veja o projeto em ação!___](https://books-realm-app-frontend.vercel.app/) 🎬
-Obs.: por motivo de segurança as opções de remover, editar e criar novos livros, apesar de desenvolvidas, estão desabilitadas, entretanto está habilitado o login e o uso do input de busca dos livros por títilo, por autor, ou pelo nome da obra.
+Obs.: por motivo de segurança as opções de remover, editar e criar novos livros, apesar de desenvolvidas, estão desabilitadas, entretanto está habilitado o login e o uso do input de busca dos livros pelo nome do autor, ou pelo gênero, ou pelo título da obra.
 Para o login use ``email@email.com`` e senha use a palavra ``email``. Deevido a página estar hospedada de forma gratuíta usando o render.com para o backend ela pode precisar de alguns instantes para reativar e liberar o acesso a página.
 
 > Para o deploy do frontend fora utilizado o [Vercel](https://vercel.com/)
@@ -91,9 +91,12 @@ A BookRealm oferece as seguintes funcionalidades:
 
 - Autenticação e Autorização: A aplicação requer autenticação para acessar suas funcionalidades. Os usuários podem fazer login com suas credenciais existentes ou criar uma nova conta. O uso de tokens JWT e senhas encriptadas garante a segurança das informações e do acesso.
 
-- Adicionar Livro: Os usuários podem adicionar novos livros com informações detalhadas, incluindo título, autor, descrição, imagem da capa e outras informações relevantes.
+- Efetuar a busca de livros pelo nome do autor, ou pelo gênero, ou pelo título da obra digitando no input search e escolhendo o input radio do tipo desejado.
 
-- Visualizar Livro: Os usuários podem visualizar os detalhes de um livro específico, incluindo todas as informações fornecidas durante a adição.
+- Visualizar Livro: Os usuários podem visualizar os detalhes de um livro específico.
+
+### Somente para o administardor da página:
+- Adicionar Livro: Os usuários podem adicionar novos livros com informações detalhadas, incluindo título, autor, descrição, imagem da capa e outras informações relevantes.
 
 - Atualizar Livro: Os usuários têm a opção de editar as informações de um livro existente, como título, autor, descrição e imagem da capa.
 
