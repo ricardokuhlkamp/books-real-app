@@ -61,6 +61,8 @@ Em resumo, uma aplicação MERN é uma aplicação web completa que aproveita o 
 </center>
 
 - [___Veja o projeto em ação!___](https://books-realm-app-frontend.vercel.app/) 🎬
+Obs.: por motivo de segurança as opções de remover, editar e criar novos livros, apesar de desenvolvidas, estão desabilitadas, entretanto está habilitado o login e o uso do input de busca dos livros por títilo, por autor, ou pelo nome da obra.
+Para o login use ``email@email.com`` e senha use a palavra ``email``. Deevido a página estar hospedada de forma gratuíta usando o render.com para o backend ela pode precisar de alguns instantes para reativar e liberar o acesso a página.
 
 > Para o deploy do frontend fora utilizado o [Vercel](https://vercel.com/)
 
